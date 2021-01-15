@@ -10,7 +10,6 @@ using Microsoft.Extensions.Logging;
 namespace GlobalizedApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         #region Attributes 
@@ -45,13 +44,15 @@ namespace GlobalizedApi.Controllers
         #region Endpoints
 
         [HttpGet]
-        [Route("/GetMessage")]
-        public async Task<IActionResult> GetMessage()
+        [Route("WeatherForecast/{date}")]
+        public async Task<IActionResult> Get(DateTime date)
         {
+            //create a fake weather forecast model ( teorically it should be retrieved from a repository/helper ) 
+            var weatherForecast = new WeatherForecast { Date = date, TemperatureC = 25 };
             // getting current culture -> auto injected from default request culture provider via cookie,accept-language http header or "culture" http query string param
             var currentCulture = CultureInfo.CurrentCulture;
             // retrieve string from resx file in resources folder ( see microsoft documentation for resources naming conventions )
-            var message = stringLocalizer.GetString("MessaggioBenvenuto");
+            var message = stringLocalizer.GetString("ForecastMessage", weatherForecast.Date, weatherForecast.TemperatureC, weatherForecast.TemperatureF);
             //returning message value
             return Ok(message.Value);
         }

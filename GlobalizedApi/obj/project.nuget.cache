@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cO9RP2xqMti0bZih790X6iQrsaUPSyKiD3rBtK90UsTOgk2zkZaUR6nrlfNr9b0Qhh4o6h4Whmw/49JeXXFfQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Raffaele\\Desktop\\Sviluppo\\Progetti_Test\\GlobalizedApi\\GlobalizedApi\\GlobalizedApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Raffaele\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\Raffaele\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\Raffaele\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

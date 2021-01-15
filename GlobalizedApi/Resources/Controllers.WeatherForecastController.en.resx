@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MessaggioBenvenuto" xml:space="preserve">
-    <value>Hello</value>
+  <data name="ForecastMessage" xml:space="preserve">
+    <value>Weather forecast at date {0} : {1} ° celsius,  {2} ° fahrenheit</value>
   </data>
 </root>

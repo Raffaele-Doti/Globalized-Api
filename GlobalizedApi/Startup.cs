@@ -47,7 +47,8 @@ namespace GlobalizedApi
             var supportedCultures = new[] { "en", "it" };
             var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[1])
                 .AddSupportedCultures(supportedCultures)
-                .AddSupportedUICultures(supportedCultures);
+                .AddSupportedUICultures(supportedCultures)
+                ;
 
             app.UseRequestLocalization(localizationOptions);
             #endregion
@@ -60,6 +61,7 @@ namespace GlobalizedApi
 
             app.UseEndpoints(endpoints =>
             {
+                
                 endpoints.MapControllers();
             });
         }
