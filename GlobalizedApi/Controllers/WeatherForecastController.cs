@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using GlobalizedApi.Abstracts;
 using GlobalizedApi.ActionFilter;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -10,20 +11,12 @@ using Microsoft.Extensions.Logging;
 
 namespace GlobalizedApi.Controllers
 {
-    [ApiController]
-    public class WeatherForecastController : ControllerBase
+   
+    public class WeatherForecastController : DefaultController<WeatherForecastController>
     {
         #region Attributes 
-        /// <summary>
-        /// String localizer istance.
-        /// </summary>
-        private readonly IStringLocalizer<WeatherForecastController> stringLocalizer;
-
-        /// <summary>
-        /// logger
-        /// </summary>
-        private readonly ILogger<WeatherForecastController> _logger;
-
+        
+ 
         #endregion
 
         #region Ctor 
@@ -33,40 +26,42 @@ namespace GlobalizedApi.Controllers
         /// </summary>
         /// <param name="stringLocalizer"></param>
         /// <param name="logger"></param>
-        public WeatherForecastController(IStringLocalizer<WeatherForecastController> stringLocalizer, ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(IStringLocalizer<WeatherForecastController> stringLocalizer, ILogger<WeatherForecastController> logger) : base( stringLocalizer, logger)
         {
-            //dependency injection 
-            this.stringLocalizer = stringLocalizer;
-            _logger = logger;
+            // Other operations here
         }
 
         #endregion
 
         #region Endpoints
 
+        /// <summary>
+        /// Endpoint to get a weather forecast
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("WeatherForecast/{date}")]
         public async Task<IActionResult> Get(DateTime date)
         {
-            //create a fake weather forecast model ( teorically it should be retrieved from a repository/helper ) 
-            var weatherForecast = new WeatherForecast { Date = date, TemperatureC = 25 };
-            // getting current culture -> auto injected from default request culture provider via cookie,accept-language http header or "culture" http query string param
-            var currentCulture = CultureInfo.CurrentCulture;
-            // retrieve string from resx file in resources folder ( see microsoft documentation for resources naming conventions )
-            var message = stringLocalizer.GetString("ForecastMessage", weatherForecast.Date, weatherForecast.TemperatureC, weatherForecast.TemperatureF);
-            //returning message value
+            // Create a fake weather forecast model ( teorically it should be retrieved from a repository/helper ) 
+            var weatherForecast = new WeatherForecast { Date = date, TemperatureC = 25 };           
+            // Retrieve string from resx file in resources folder ( see microsoft documentation for resources naming conventions )
+            var message = base.stringLocalizer.GetString("ForecastMessage", weatherForecast.Date, weatherForecast.TemperatureC, weatherForecast.TemperatureF);
+            // Returning message value
             return Ok(message.Value);
         }
 
+        /// <summary>
+        /// Endpoint to save a weather forecast
+        /// </summary>
+        /// <param name="weatherForecast"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("WeatherForecast")]
         [ValidateModel]
         public async Task<IActionResult> Post(WeatherForecast weatherForecast)
         {
-            if (!ModelState.IsValid)
-            {
-                return StatusCode(400, ModelState.Values);
-            }
             return Ok(weatherForecast);
         }
         #endregion

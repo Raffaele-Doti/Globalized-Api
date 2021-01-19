@@ -26,9 +26,9 @@ namespace GlobalizedApi
         public void ConfigureServices(IServiceCollection services)
         {
             #region GlobalizationService
-            //adding globalization and localization service
+            // Adding globalization and localization service
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            //adding data annotazion localization.
+            // Adding data annotazion localization.
             services.AddMvc().AddDataAnnotationsLocalization();
             #endregion 
 
@@ -44,9 +44,9 @@ namespace GlobalizedApi
             }
 
             #region GlobalizationConfiguration
-            //Supported cultures for globalization and localizations middleware
+            // Supported cultures for globalization and localizations middleware
             var supportedCultures = new[] { "en", "it" };
-            //Setting a default culture
+            // Setting a default culture
             var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[1])
                 .AddSupportedCultures(supportedCultures)
                 .AddSupportedUICultures(supportedCultures)

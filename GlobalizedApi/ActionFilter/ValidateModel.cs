@@ -13,7 +13,7 @@ namespace GlobalizedApi.ActionFilter
         {
             if (!context.ModelState.IsValid)
             {
-                //return first model validation error
+                // Return first model validation error
                 context.Result = new BadRequestObjectResult($"error : {context.ModelState.Values.First().Errors.First().ErrorMessage}");
             }
         }
