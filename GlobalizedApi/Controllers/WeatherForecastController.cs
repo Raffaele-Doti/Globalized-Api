@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using GlobalizedApi.ActionFilter;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
@@ -57,6 +58,17 @@ namespace GlobalizedApi.Controllers
             return Ok(message.Value);
         }
 
+        [HttpPost]
+        [Route("WeatherForecast")]
+        [ValidateModel]
+        public async Task<IActionResult> Post(WeatherForecast weatherForecast)
+        {
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(400, ModelState.Values);
+            }
+            return Ok(weatherForecast);
+        }
         #endregion
     }
 }

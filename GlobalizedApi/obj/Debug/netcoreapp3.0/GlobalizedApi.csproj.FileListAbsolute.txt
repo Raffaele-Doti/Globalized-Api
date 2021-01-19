@@ -9,9 +9,10 @@ C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\bin
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\bin\Debug\netcoreapp3.0\GlobalizedApi.pdb
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\bin\Debug\netcoreapp3.0\en\GlobalizedApi.resources.dll
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\bin\Debug\netcoreapp3.0\it\GlobalizedApi.resources.dll
-C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.csprojAssemblyReference.cache
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.Resources.Controllers.WeatherForecastController.en.resources
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.Resources.Controllers.WeatherForecastController.it.resources
+C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.Resources.ValidationResource.en.resources
+C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.Resources.ValidationResource.it.resources
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.csproj.GenerateResource.cache
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.AssemblyInfoInputs.cache
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.AssemblyInfo.cs
@@ -25,3 +26,4 @@ C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.dll
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.pdb
 C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.genruntimeconfig.cache
+C:\Users\Raffaele\Desktop\Sviluppo\Progetti_Test\GlobalizedApi\GlobalizedApi\obj\Debug\netcoreapp3.0\GlobalizedApi.csprojAssemblyReference.cache

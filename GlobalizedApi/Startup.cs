@@ -44,7 +44,9 @@ namespace GlobalizedApi
             }
 
             #region GlobalizationConfiguration
+            //Supported cultures for globalization and localizations middleware
             var supportedCultures = new[] { "en", "it" };
+            //Setting a default culture
             var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[1])
                 .AddSupportedCultures(supportedCultures)
                 .AddSupportedUICultures(supportedCultures)
